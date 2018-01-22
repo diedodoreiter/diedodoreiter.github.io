@@ -1,1 +1,137 @@
-<html>hello world<html>
+<!DOCTYPE html>
+<style type="text/css">
+    #myimg {
+        background-image: url('bird.png');
+        background-repeat:no-repeat;
+        background-size:contain;
+        background-position: center;
+        color: white;
+        background-color: #323944;
+    }
+    #body {
+        background-color: #c8c8c8;
+    }
+    #modalcontent1 {
+        background-image: url('bird.png');
+        background-repeat:no-repeat;
+        background-size:contain;
+        background-position: center;
+        color: white;
+        background-color: #323944;
+    }
+    #modalcontent2 {
+        background-image: url('bird.png');
+        background-repeat:no-repeat;
+        background-size:contain;
+        background-position: center;
+        color: white;
+        background-color: #323944;
+    }
+</style>
+
+<head>
+    <title>Die Dodoreiter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body id="body">
+<nav id="navbaeTop" class="navbar navbar-default navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Die Dodoreiter</a>
+        </div>
+        <div class="collapse navbar-collapse" id="collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="https://diedodoreiter.github.io" target="_blank">Home</a></li>
+                <li><a href="https://diedodoreiter.github.io/bestenliste.html" target="_blank">Bestenliste</a></li>
+                <!--<li><a href="https://diedodoreiter.github.io/telegram.html" target="_blank">Telegram</a></li>-->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container">
+    <div class="jumbotron" id="myimg">
+        <h1>Die Dodoreiter</h1>
+        <p>Wilkommen zur offizielen Website der Dodoreiter! Hier findet ihr alle Informationen und Richtlinien über unseren Clan. Außerdem ist unter dem Tab "Bestenliste" jedes Mitglied aufgeistet,  mit seinen gesammelten Cronen für den Clan sowie das Beitrittsdatum. Viel Spaß!</p>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Informationen</h2>
+            <p>Unter diesem Punkt werden die generellen Claninformationen beschrieben.</p>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal1">Informationen</button>
+
+            <!-- Modal -->
+            <div id="modal1" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content" id="modalcontent1">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Informationen</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>todo.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <h2>Richtlinien</h2>
+            <p>Unter diesem Punkt werden die Clanrichtlinien beschrieben.</p>
+            <button type="button" class="btn btn-warning " data-toggle="modal" data-target="#modal2">Richtlinien</button>
+
+            <!-- Modal -->
+            <div id="modal2" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content" id="modalcontent2">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Richtlinien</h4>
+                        </div>
+                        <div class="modal-body">
+                            <ul>
+                                <li >Jedes Mitglied macht mindestens 20 Kronen bei der Clantruhe, außer:
+                                    <ul >
+                                        <li>Krankheit</li>
+                                        <li>Urlaub</li>
+                                        <li>Schule</li>
+                                    </ul>
+
+                                </li>
+                                <li>Ausreden werden keine zwei Wochen in Folge tolleriert.</li>
+                                <li>Ältesten ist es nicht erlaubt zu kicken, außer: </li>
+                                <ul >
+                                    <li>Beleidigung im Clanchat</li>
+                                </ul>
+                                <li>Ansonsten ist das Kicken den Anführern vorenthalten.</li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
