@@ -17,8 +17,24 @@
         background-size:contain;
         background-position: center;
         color: white;
-
     }
+    #hr {
+    	height: 25px;
+    	border: 0;
+    	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+    }
+    #footer{
+        position:fixed;
+        left:0px;
+        bottom:0px;
+        background-color: #323944;
+        color:white;
+        width: 100%;
+        border-top-style: solid;
+    }
+    br {
+        line-height: 20%;
+     }
 </style>
 
 <head>
@@ -27,8 +43,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bestenliste</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
 </head>
 <body id="body">
 <nav id="navbaeTop" class="navbar navbar-default navbar-inverse">
@@ -73,4 +91,37 @@
         </table>
     </div>
 </body>
+<hr id="hr">
+<h2 style="text-align: center;">Clanentwicklung:</h2>
+<canvas id="line-chart" width="800" height="450" style="margin-bottom:100px;"></canvas>
+<script>
+new Chart(document.getElementById("line-chart"), {
+  type: 'line',
+  data: {
+    labels: ['14.1.18','21.1.18',],
+    datasets: [{
+        data: [36702,35855,],
+        label: "Clantrophäen",
+        borderColor: "#404040",
+        fill: true
+      }
+
+    ]
+  },
+  options: {
+    title: {
+      display: false,
+      text: 'Clanentwicklung'
+    }
+  }
+});
+</script>
+<div id="footer">
+  <p style="margin-left:20px;margin-top:5px;"> Die Dodoreiter
+  <br>
+  Clan bei Clash Royale
+  <br>
+  <a href="http://t.me/diedodoreiter"><i class="fa fa-telegram"> Adde uns bei Telegram!</i></a>
+  </p>
+</div>
 </html>
